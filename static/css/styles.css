@@ -98,7 +98,7 @@ body {
 
 /* Query */
 @media (max-width: 750px) {
-  h1, h2, h3, h4, h5, h6, p, a, i{
+  h1, h2, h3, h4, h5, h6, p, a, i {
     font-size: 200%;
   }
 }
