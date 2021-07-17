@@ -33,26 +33,36 @@
             <div class="card-body">
               <h6 class="card-title">{{cafe.name}}</h6>
 
-              {% if cafe.has_wifi : %}
-                <i class="far fa-wifi cafe-icon icon-available"></i>
-              {% else : %}
-                <i class="far fa-wifi cafe-icon"></i>
-              {% endif %}
-              {% if cafe.has_sockets : %}
-                <i class="far fa-plug cafe-icon icon-available"></i>
-              {% else : %}
-                <i class="far fa-plug cafe-icon"></i>
-              {% endif %}
-              {% if cafe.can_take_calls : %}
-                <i class="far fa-phone cafe-icon icon-available"></i>
-              {% else : %}
-                <i class="far fa-phone cafe-icon"></i>
-              {% endif %}
-              {% if cafe.has_toilet : %}
-                <i class="far fa-toilet cafe-icon icon-available"></i>
-              {% else : %}
-                <i class="far fa-toilet cafe-icon"></i>
-              {% endif %}
+
+              <div class="row">
+
+                <div class="col-12 col-lg-6">
+                  {% if cafe.has_wifi : %}
+                    <i class="far fa-wifi cafe-icon icon-available"></i>
+                  {% else : %}
+                    <i class="far fa-wifi cafe-icon"></i>
+                  {% endif %}
+                  {% if cafe.has_sockets : %}
+                    <i class="far fa-plug cafe-icon icon-available"></i>
+                  {% else : %}
+                    <i class="far fa-plug cafe-icon"></i>
+                  {% endif %}
+                </div>
+
+                <div class="col-12 col-lg-6">
+                  {% if cafe.can_take_calls : %}
+                    <i class="far fa-phone cafe-icon icon-available"></i>
+                  {% else : %}
+                    <i class="far fa-phone cafe-icon"></i>
+                  {% endif %}
+                  {% if cafe.has_toilet : %}
+                    <i class="far fa-toilet cafe-icon icon-available"></i>
+                  {% else : %}
+                    <i class="far fa-toilet cafe-icon"></i>
+                  {% endif %}
+                </div>
+
+              </div>
 
             </div>
             <div class="d-grid gap-2">

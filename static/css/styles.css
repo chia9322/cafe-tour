@@ -83,7 +83,6 @@ body {
 #footer {
   text-align: center;
   color: white;
-
 }
 
 .social-icon {
@@ -98,8 +97,8 @@ body {
 
 
 /* Query */
-@media (max-width: 1028px) {
-  h1, h2, h3, h4, h5, h6, p, a {
-    font-size: 150%;
+@media (max-width: 750px) {
+  h1, h2, h3, h4, h5, h6, p, a, i{
+    font-size: 200%;
   }
 }
