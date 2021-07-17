@@ -1,0 +1,101 @@
+body {
+  text-align: center;
+  font-family: "Montserrat";
+  color: #4f4239;
+}
+
+
+/* Containers */
+.container-fluid {
+  padding: 2% 15%;
+}
+
+/* Sections */
+.color-section {
+  background-color: #9b8677
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+
+/* Navigation Bar */
+
+
+.nav-item {
+  padding: 0 18px;
+}
+
+
+/* Cafes Section*/
+.card {
+  height: 170px;
+  padding: 10px;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.cafe-column {
+  padding: 20px;
+}
+
+.cafe-icon {
+  margin: 10px;
+  color: white;
+}
+
+.icon-available {
+  color: #9b8677;
+}
+
+
+/* Detail Section */
+#detail {
+  text-align: left;
+  line-height: 30px;
+  min-height: 550px;
+}
+
+#detail p {
+  color: #9b8677;
+}
+
+.detail-column {
+  padding: 10px;
+
+}
+
+.cafe-img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+/* Add Cafe Form */
+.cafe-form {
+  padding: 2% 40%;
+  text-align: left;
+}
+
+
+
+/* Footer */
+#footer {
+  text-align: center;
+  color: white;
+
+}
+
+.social-icon {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #dcc7b9
+}
+
