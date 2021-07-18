@@ -7,7 +7,7 @@ body {
 
 /* Containers */
 .container-fluid {
-  padding: 2% 15%;
+  padding: 2% 5%;
 }
 
 /* Sections */
@@ -47,13 +47,11 @@ body {
 #cafes a {
   text-decoration: none;
 }
-
 .card-img {
   object-fit: cover;
   height: 200px;
   width: 100%
 }
-
 .card-title {
   padding: 3%;
   font-weight: 600;
