@@ -1,5 +1,4 @@
 {% include "header.html" %}
-<body>
 
   <section id="cafes" class="white-section">
     <div class="container-fluid">
@@ -7,54 +6,51 @@
 
         {% for cafe in cafes : %}
         <div class="col-12 col-lg-6 col-xl-4 cafe-column">
+          <a href="/cafe/{{cafe.id}}">
           <div class="card" style="width: 100%;">
             <div class="card-body">
               <h5 class="card-title">{{cafe.name}}</h5>
 
 
                 {% if cafe.has_wifi : %}
-                  <i class="far fa-wifi cafe-icon icon-available"></i>
+                  <h5 class="far fa-wifi cafe-icon icon-available"></h5>
                 {% else : %}
-                  <i class="far fa-wifi cafe-icon"></i>
+                  <h5 class="far fa-wifi cafe-icon"></h5>
                 {% endif %}
                 {% if cafe.has_sockets : %}
-                  <i class="far fa-plug cafe-icon icon-available"></i>
+                  <h5 class="far fa-plug cafe-icon icon-available"></h5>
                 {% else : %}
-                  <i class="far fa-plug cafe-icon"></i>
+                  <h5 class="far fa-plug cafe-icon"></h5>
                 {% endif %}
                 {% if cafe.can_take_calls : %}
-                  <i class="far fa-phone cafe-icon icon-available"></i>
+                  <h5 class="far fa-phone cafe-icon icon-available"></h5>
                 {% else : %}
-                  <i class="far fa-phone cafe-icon"></i>
+                  <h5 class="far fa-phone cafe-icon"></h5>
                 {% endif %}
                 {% if cafe.has_toilet : %}
-                  <i class="far fa-toilet cafe-icon icon-available"></i>
+                  <h5 class="far fa-toilet cafe-icon icon-available"></h5>
                 {% else : %}
                   <i class="far fa-toilet cafe-icon"></i>
                 {% endif %}
 
 
                 <div class="home-cafe-detail">
-                  <p class="fas fa-map-marker-alt"> {{cafe.location}}</p>
+                  <h6 class="fas fa-map-marker-alt"> {{cafe.location}}</h6>
                   <br>
-                  <p class="fas fa-tag"> {{cafe.coffee_price}}</p>
+                  <h6 class="fas fa-tag"> {{cafe.coffee_price}}</h6>
                   <br>
-                  <p class="fas fa-chair"> {{cafe.seats}}</p>
+                  <h6 class="fas fa-chair"> {{cafe.seats}}</h6>
                 </div>
 
             </div>
-            <div class="d-grid gap-2">
-            <a href="/cafe/{{cafe.id}}" class="btn btn-outline-secondary">Detail</a>
-            </div>
           </div>
+          </a>
         </div>
         {% endfor %}
 
       </div>
     </div>
   </section>
-
-</body>
 
 {% include "footer.html" %}
 

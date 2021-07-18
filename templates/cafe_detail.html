@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
 {% include "header.html" %}
-
-<body>
 
 
 
@@ -13,44 +9,45 @@
       <div class="row">
         <div class="col-12 col-lg-6 detail-column">
           <!-- Cafe Name -->
-          <h3>{{cafe.name}}</h3>
+          <h2>{{cafe.name}}</h2>
 
 
           <!-- Cafe Facility -->
             {% if cafe.has_wifi : %}
-            <i class="far fa-wifi cafe-icon icon-available"></i>
+            <h4 class="far fa-wifi cafe-icon icon-available"></h4>
             {% else : %}
-            <i class="far fa-wifi cafe-icon"></i>
+            <h4 class="far fa-wifi cafe-icon"></h4>
             {% endif %}
             {% if cafe.has_sockets : %}
-            <i class="far fa-plug cafe-icon icon-available"></i>
+            <h4 class="far fa-plug cafe-icon icon-available"></h4>
             {% else : %}
-            <i class="far fa-plug cafe-icon"></i>
+            <h4 class="far fa-plug cafe-icon"></h4>
             {% endif %}
             {% if cafe.can_take_calls : %}
-            <i class="far fa-phone cafe-icon icon-available"></i>
+            <h4 class="far fa-phone cafe-icon icon-available"></h4>
             {% else : %}
-            <i class="far fa-phone cafe-icon"></i>
+            <h4 class="far fa-phone cafe-icon"></h4>
             {% endif %}
             {% if cafe.has_toilet : %}
-            <i class="far fa-toilet cafe-icon icon-available"></i>
+            <h4 class="far fa-toilet cafe-icon icon-available"></h4>
             {% else : %}
-            <i class="far fa-toilet cafe-icon"></i>
+            <h4 class="far fa-toilet cafe-icon"></h4>
             {% endif %}
 
 
           <br>
           <br>
 
-          <p class="fas fa-map-marker-alt"> {{cafe.location}}</p>
-          <br>
-          <p class="fas fa-tag"> {{cafe.coffee_price}}</p>
-          <br>
-          <p class="fas fa-chair"> {{cafe.seats}}</p>
+          <h5 class="fas fa-map-marker-alt"> {{cafe.location}}</h5>
+          <br><br>
+          <h5 class="fas fa-tag"> {{cafe.coffee_price}}</h5>
+          <br><br>
+          <h5 class="fas fa-chair"> {{cafe.seats}}</h5>
 
 
 
         </div>
+
 
 
 
@@ -58,27 +55,31 @@
           <img class="cafe-img" src={{cafe.img_url}}>
         </div>
 
+        {% if cafe.map_embed %}
+          {{cafe.map_embed | safe}}
+
+        {% else: %}
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13753067.550433964!2d129.4210650906985!3d32.69448726675481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2sJapan!5e0!3m2!1sen!2sjp!4v1626598174199!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        {% endif %}
+
         <div class="row">
           <div class="col-12 col-lg-6 detail-column">
             <div class="d-grid gap-2">
-              <a class="btn btn-outline-secondary map-link" href={{cafe.map_url}}>MAP</a>
+              <a class="btn btn-lg btn-outline-secondary map-link" href={{cafe.map_url}}>MAP</a>
             </div>
           </div>
           <div class="col-12 col-lg-6 detail-column">
-            <a class="btn btn-secondary" href="{{ url_for('edit_cafe', cafe_id=cafe.id)}}">Edit</a>
-            <a class="btn btn-danger" href="{{ url_for('delete', id=cafe.id) }}">Delete</a>
+            <a class="btn btn-lg btn-secondary" href="{{ url_for('edit_cafe', cafe_id=cafe.id)}}">Edit</a>
+            <a class="btn btn-lg btn-danger" href="{{ url_for('delete', id=cafe.id) }}">Delete</a>
           </div>
         </div>
 
       </div>
+    </div>
 
   </section>
 
 
 
 
-
-</body>
 {% include "footer.html" %}
-
-</html>

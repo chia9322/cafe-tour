@@ -28,9 +28,12 @@ body {
   top: 0;
   width: 100%;
 }
-
+.navbar-brand{
+  font-size: 150%
+}
 .nav-item {
   padding: 0 18px;
+  font-size: 120%
 }
 
 
@@ -41,9 +44,13 @@ body {
 .card {
   padding: 10px;
 }
+#cafes a {
+  text-decoration: none;
+}
 
 .card-title {
   font-weight: 600;
+  color: #4f4239;
 }
 
 .cafe-column {
@@ -53,6 +60,7 @@ body {
 .cafe-icon {
   margin: 10px;
   color: white;
+
 }
 
 .icon-available {
@@ -60,8 +68,18 @@ body {
 }
 
 .home-cafe-detail {
-padding: 5% 20%;
+  padding: 7% 5% 0;
   text-align: left;
+  color: #9b8677;
+}
+
+.card:hover {
+  background-color: #d6cec8;
+}
+.card:hover .cafe-icon {
+  color: #d6cec8;
+}
+.card:hover .icon-available {
   color: #9b8677;
 }
 
@@ -91,18 +109,15 @@ padding: 5% 20%;
 /* Cafe Editor Form */
 .cafe-form {
   padding: 10% 30%;
+  line-height: 200%;
   text-align: left;
+  font-size: 120%
 }
 
 
 
 /* Footer */
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
   background-color: #9b8677
   text-align: center;
 }
@@ -130,7 +145,6 @@ padding: 5% 20%;
 /* Query */
 @media only screen and (max-device-width: 480px) {
   h1, h2, h3, h4, h5, h6, p, a, i {
-    font-size: 140%;
   }
   #cafes {
     padding: 7% 0 10%;
@@ -139,7 +153,6 @@ padding: 5% 20%;
     padding: 10% 0;
   }
   .cafe-form {
-    font-size: 140%;
     padding: 15% 20%;
   }
 }

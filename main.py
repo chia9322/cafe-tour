@@ -21,6 +21,7 @@ class Cafe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(250), unique=True, nullable=False)
     map_url = db.Column(db.String(500), nullable=False)
+    map_embed = db.Column(db.String(500), nullable=True)
     img_url = db.Column(db.String(500), nullable=False)
     location = db.Column(db.String(250), nullable=False)
     has_sockets = db.Column(db.Boolean, nullable=False)
@@ -44,6 +45,7 @@ class CafeForm(FlaskForm):
     seats = StringField('Seats', validators=[DataRequired()])
     coffee_price = StringField('Coffee Price', validators=[DataRequired()])
     map_url = StringField('Map Url', validators=[DataRequired()])
+    map_embed = StringField('Map Embed Url (Optional)')
     img_url = StringField('Image Url', validators=[DataRequired()])
     has_wifi = BooleanField('Wifi')
     can_take_calls = BooleanField('Phone Call')
@@ -71,6 +73,7 @@ def add_cafe():
         new_cafe = Cafe(
             name=add_cafe_form.name.data,
             map_url=add_cafe_form.map_url.data,
+            map_embed=add_cafe_form.map_embed.data,
             img_url=add_cafe_form.img_url.data,
             location=add_cafe_form.location.data,
             has_sockets=add_cafe_form.has_sockets.data,
@@ -94,6 +97,7 @@ def edit_cafe(cafe_id):
     if edit_form.validate_on_submit():
         cafe_to_update.name = edit_form.name.data
         cafe_to_update.map_url = edit_form.map_url.data
+        cafe_to_update.map_embed = edit_form.map_embed.data
         cafe_to_update.img_url = edit_form.img_url.data
         cafe_to_update.location = edit_form.location.data
         cafe_to_update.has_sockets = edit_form.has_sockets.data
