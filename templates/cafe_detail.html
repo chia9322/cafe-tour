@@ -59,12 +59,12 @@
         </div>
 
         <div class="row">
-          <div class="detail-column col-md-6">
+          <div class="col-12 col-lg-6 detail-column">
             <div class="d-grid gap-2">
               <a class="btn btn-outline-secondary map-link" href={{cafe.map_url}}>MAP</a>
             </div>
           </div>
-          <div class="detail-column col-md-6">
+          <div class="col-12 col-lg-6 detail-column">
             <a class="btn btn-secondary" href="{{ url_for('edit_cafe', cafe_id=cafe.id)}}">Edit</a>
             <a class="btn btn-danger" href="{{ url_for('delete', id=cafe.id) }}">Delete</a>
           </div>
