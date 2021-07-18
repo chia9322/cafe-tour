@@ -145,14 +145,19 @@ body {
 /* Query */
 @media only screen and (max-device-width: 480px) {
   h1, h2, h3, h4, h5, h6, p, a, i {
+    font-size: 140%;
   }
   #cafes {
     padding: 7% 0 10%;
+  }
+  .home-cafe-detail {
+    padding: 15% 5% 0;
   }
   #detail {
     padding: 10% 0;
   }
   .cafe-form {
+    font-size: 140%;
     padding: 15% 20%;
   }
 }
