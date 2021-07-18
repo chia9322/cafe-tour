@@ -162,12 +162,18 @@ body {
   #cafes {
     padding: 7% 0 10%;
   }
+  .card-img {
+    object-fit: cover;
+    max-height: 380px;
+    width: 100%
+  }
   .home-cafe-detail {
     padding: 7% 15% 0;
     text-align: center
   }
   #detail {
     padding: 10% 0;
+    font-size: 140%;
   }
   .cafe-form {
     font-size: 140%;
