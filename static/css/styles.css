@@ -48,7 +48,14 @@ body {
   text-decoration: none;
 }
 
+.card-img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%
+}
+
 .card-title {
+  padding: 3%;
   font-weight: 600;
   color: #4f4239;
 }
@@ -92,16 +99,21 @@ body {
   min-height: 550px;
 }
 
-#detail p {
+.detail-column {
+  padding: 10px;
   color: #9b8677;
 }
 
-.detail-column {
-  padding: 10px;
+.detail-title {
+  color: #4f4239;
+}
+
+.detail-info {
+  padding: 10px 0;
 }
 
 .cafe-img {
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 }
 

@@ -9,6 +9,7 @@
           <a href="/cafe/{{cafe.id}}">
           <div class="card" style="width: 100%;">
             <div class="card-body">
+              <img class="card-img" src={{cafe.img_url}}>
               <h5 class="card-title">{{cafe.name}}</h5>
 
 
@@ -35,11 +36,11 @@
 
 
                 <div class="home-cafe-detail">
-                  <h6 class="fas fa-map-marker-alt"> {{cafe.location}}</h6>
+                  <h5 class="fas fa-map-marker-alt"> {{cafe.location}}</h5>
                   <br>
-                  <h6 class="fas fa-tag"> {{cafe.coffee_price}}</h6>
+                  <h5 class="fas fa-tag"> {{cafe.coffee_price}}</h5>
                   <br>
-                  <h6 class="fas fa-chair"> {{cafe.seats}}</h6>
+                  <h5 class="fas fa-chair"> {{cafe.seats}}</h5>
                 </div>
 
             </div>
