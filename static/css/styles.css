@@ -128,18 +128,18 @@ padding: 5% 20%;
 
 
 /* Query */
-@media (max-device-width: 500px) {
+@media only screen and (max-device-width: 480px) {
   h1, h2, h3, h4, h5, h6, p, a, i {
     font-size: 140%;
   }
   #cafes {
-    padding: 20% 0;
+    padding: 5% 0 10%;
   }
   #detail {
-    padding: 20% 0;
+    padding: 7% 0;
   }
   .cafe-form {
     font-size: 140%;
-    padding: 20% 20%;
+    padding: 10% 20%;
   }
 }
