@@ -31,38 +31,38 @@
         <div class="col-12 col-lg-6 col-xl-4 cafe-column">
           <div class="card" style="width: 100%;">
             <div class="card-body">
-              <h6 class="card-title">{{cafe.name}}</h6>
+              <h5 class="card-title">{{cafe.name}}</h5>
 
 
-              <div class="row">
+                {% if cafe.has_wifi : %}
+                  <i class="far fa-wifi cafe-icon icon-available"></i>
+                {% else : %}
+                  <i class="far fa-wifi cafe-icon"></i>
+                {% endif %}
+                {% if cafe.has_sockets : %}
+                  <i class="far fa-plug cafe-icon icon-available"></i>
+                {% else : %}
+                  <i class="far fa-plug cafe-icon"></i>
+                {% endif %}
+                {% if cafe.can_take_calls : %}
+                  <i class="far fa-phone cafe-icon icon-available"></i>
+                {% else : %}
+                  <i class="far fa-phone cafe-icon"></i>
+                {% endif %}
+                {% if cafe.has_toilet : %}
+                  <i class="far fa-toilet cafe-icon icon-available"></i>
+                {% else : %}
+                  <i class="far fa-toilet cafe-icon"></i>
+                {% endif %}
 
-                <div class="col-12 col-lg-6">
-                  {% if cafe.has_wifi : %}
-                    <i class="far fa-wifi cafe-icon icon-available"></i>
-                  {% else : %}
-                    <i class="far fa-wifi cafe-icon"></i>
-                  {% endif %}
-                  {% if cafe.has_sockets : %}
-                    <i class="far fa-plug cafe-icon icon-available"></i>
-                  {% else : %}
-                    <i class="far fa-plug cafe-icon"></i>
-                  {% endif %}
+
+                <div class="home-cafe-detail">
+                  <p class="fas fa-map-marker-alt"> {{cafe.location}}</p>
+                  <br>
+                  <p class="fas fa-tag"> {{cafe.coffee_price}}</p>
+                  <br>
+                  <p class="fas fa-chair"> {{cafe.seats}}</p>
                 </div>
-
-                <div class="col-12 col-lg-6">
-                  {% if cafe.can_take_calls : %}
-                    <i class="far fa-phone cafe-icon icon-available"></i>
-                  {% else : %}
-                    <i class="far fa-phone cafe-icon"></i>
-                  {% endif %}
-                  {% if cafe.has_toilet : %}
-                    <i class="far fa-toilet cafe-icon icon-available"></i>
-                  {% else : %}
-                    <i class="far fa-toilet cafe-icon"></i>
-                  {% endif %}
-                </div>
-
-              </div>
 
             </div>
             <div class="d-grid gap-2">

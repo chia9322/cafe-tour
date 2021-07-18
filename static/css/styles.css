@@ -48,6 +48,12 @@ body {
   color: #9b8677;
 }
 
+.home-cafe-detail {
+padding: 5% 20%;
+  text-align: left;
+  color: #9b8677;
+}
+
 
 /* Detail Section */
 #detail {
@@ -97,8 +103,8 @@ body {
 
 
 /* Query */
-@media (max-width: 900px) {
+@media (max-device-width: 500px) {
   h1, h2, h3, h4, h5, h6, p, a, i {
-    font-size: 200%;
+    font-size: 150%;
   }
 }
