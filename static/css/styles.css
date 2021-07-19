@@ -162,7 +162,6 @@ body {
   }
   .card-img {
     object-fit: cover;
-    height: 400px;
     width: 100%
   }
   .home-cafe-detail {
