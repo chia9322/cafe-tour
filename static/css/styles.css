@@ -162,7 +162,7 @@ body {
   }
   .card-img {
     object-fit: cover;
-    width: 100%
+    width: 100%;
   }
   .home-cafe-detail {
     padding: 7% 25% 0;
